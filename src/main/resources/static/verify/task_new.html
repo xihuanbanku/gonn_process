@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>新建项目</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/gloab.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="../gonn/js/jquery-1.11.1.min.js"></script>
+<script src="../gonn/js/register.js"></script>
+</head>
+<body class="bgf4">
+<div class="login-box f-mt10 f-pb50">
+	<div class="main bgf">    
+    	<div class="reg-box-pan display-inline">  
+        	<div class="step">        	
+                <h1>新建任务</h1>
+            </div>
+        	<div class="reg-box" id="verifyCheck" style="margin-top:20px;">
+            	<div class="part1">
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>指派给：</span>
+                        <div class="f-fl item-ifo">
+                            <input type="hidden" name="sender" value="1">
+                            <select name="receiver">
+                                <option value="1">ljj</option>
+                                <option value="2">lhk</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>任务名称：</span>
+                        <div class="f-fl item-ifo">
+                            <input type="text" name="name">
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>任务描述：</span>
+                        <div class="f-fl item-ifo">
+                            <textarea name="content" cols="70"></textarea>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl">&nbsp;</span>
+                        <div class="f-fl item-ifo">
+                            <a href="javascript:;" class="btn btn-blue f-r3" id="btn_part1">下一步</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="m-sPopBg" style="z-index:998;"></div>
+<script>
+$(function(){	
+	//第一页的确定按钮
+	$("#btn_part1").click(function(){						
+		if(!verifyCheck._click()) return;
+        $.ajax({
+            type: "POST",
+            url: "/process/new_process",
+            data: $(".part1 input").serialize()+"&"+ $(".part1 select").serialize()+"&"+ $(".part1 textarea").serialize(),
+            success: function (data) {
+                if(data =="ok") {
+                    window.location.href="list.html";
+                }
+            }
+        });
+	});
+	//第二页的确定按钮
+	$("#btn_part2").click(function(){			
+		if(!verifyCheck._click()) return;
+		$(".part2").hide();
+		$(".part3").show();	
+	});	
+	//第三页的确定按钮
+	$("#btn_part3").click(function(){			
+		if(!verifyCheck._click()) return;
+		$(".part3").hide();
+		$(".part4").show();
+		$(".step li").eq(2).addClass("on");
+		countdown({
+			maxTime:10,
+			ing:function(c){
+				$("#times").text(c);
+			},
+			after:function(){
+				window.location.href="my.html";		
+			}
+		});		
+	});	
+});
+function showoutc(){$(".m-sPopBg,.m-sPopCon").show();}
+function closeClause(){
+	$(".m-sPopBg,.m-sPopCon").hide();		
+}
+</script>
+<div style="text-align:center;">
+</div>
+</body>
+</html>

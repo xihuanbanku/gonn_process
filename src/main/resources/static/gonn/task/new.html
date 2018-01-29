@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>新建项目</title>
+<link href="../verify/css/bootstrap.min.css" rel="stylesheet">
+<link href="../verify/css/gloab.css" rel="stylesheet">
+<link href="../verify/css/index.css" rel="stylesheet">
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/register.js"></script>
+</head>
+<body class="bgf4">
+<div class="login-box f-mt10 f-pb50">
+	<div class="main bgf">    
+    	<div class="reg-box-pan display-inline">  
+        	<div class="step">
+                <h1>新建项目</h1>
+            </div>
+        	<div class="reg-box" id="verifyCheck" style="margin-top:20px;">
+            	<div class="part1">
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>项目名称：</span>
+                        <div class="f-fl item-ifo">
+                            <input type="text" name="name">
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>项目描述：</span>
+                        <div class="f-fl item-ifo">
+                            <textarea name="content" cols="70"></textarea>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>预计完成时间：</span>
+                        <div class="f-fl item-ifo">
+                            <input type="date" name="limitDate" >
+                            <input type="hidden" value="1">
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl">&nbsp;</span>
+                        <div class="f-fl item-ifo">
+                            <a href="javascript:;" class="btn btn-blue f-r3" id="btn_part1">下一步</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="m-sPopBg" style="z-index:998;"></div>
+<script>
+$(function(){	
+	//第一页的确定按钮
+	$("#btn_part1").click(function(){						
+		if(!verifyCheck._click()) return;
+        $.ajax({
+            type: "POST",
+            url: "/process/new_process",
+            data: $(".part1 input").serialize()+"&"+ $(".part1 select").serialize()+"&"+ $(".part1 textarea").serialize(),
+            success: function (data) {
+                if(data =="ok") {
+                    window.location.href="../../verify/task_new.html";
+                }
+            }
+        });
+	});
+});
+function showoutc(){$(".m-sPopBg,.m-sPopCon").show();}
+function closeClause(){
+	$(".m-sPopBg,.m-sPopCon").hide();		
+}
+</script>
+<div style="text-align:center;">
+</div>
+</body>
+</html>
