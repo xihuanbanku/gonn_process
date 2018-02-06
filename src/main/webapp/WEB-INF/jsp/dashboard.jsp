@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js" > <!--<![endif]-->
+<%--
+  Created by IntelliJ IDEA.
+  User: Admin
+  Date: 2018/2/6
+  Time: 22:30
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta charset="utf-8">
-    <title>Realm - Dashboard</title>
+    <title>仪表盘</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Bluth Company">
     <link rel="shortcut icon" href="assets/ico/favicon.html">
@@ -26,7 +26,7 @@
 </head>
 <body>
 <div id="wrap">
-    <%@ include file="include/navbar.jsp" %>
+    <%@include file="include/navbar.jsp"%>
 
     <div class="container-fluid">
 
@@ -673,6 +673,8 @@
         <button class="btn btn-primary">Save changes</button>
     </div>
 </div>
+
+
 
 <!-- task_modal modal -->
 <div id="task_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

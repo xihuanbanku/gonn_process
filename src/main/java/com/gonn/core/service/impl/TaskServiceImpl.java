@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service("taskService")
 @Transactional
@@ -23,9 +25,14 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public List<Task> list(Integer p_id) {
+    public Map list(Integer p_id) {
+        Map map = new HashMap();
         TaskQuery query = new TaskQuery();
         query.createCriteria().andPIdEqualTo(p_id);
-        return taskDao.selectByExample(query);
+        List<Task> results = taskDao.selectByExample(query);
+        map.put("results", results);
+        int totalcount = taskDao.countByExample(query);
+        map.put("totalcount", totalcount);
+        return map;
     }
 }

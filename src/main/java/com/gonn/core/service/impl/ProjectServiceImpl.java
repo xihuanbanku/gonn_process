@@ -54,6 +54,7 @@ public class ProjectServiceImpl implements ProjectService {
         ProjectQuery e = new ProjectQuery();
         e.setPageNo(pageIndex);
         e.setPageSize(pageCount);
+        e.createCriteria().andFlagNotEqualTo(2);
         List<Project> results = projectDao.selectByExample(e);
         map.put("results", results);
         int totalcount = projectDao.countByExample(e);

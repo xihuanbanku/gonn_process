@@ -113,9 +113,9 @@ if($('#dashboard_page').length > 0 ){
     // (string | optional) the image to display on the left
     image: 'http://profile.ak.fbcdn.net/hprofile-ak-snc6/203244_1677040371_1334985872_q.jpg',
     // (bool | optional) if you want it to fade out on its own or just sit there
-    sticky: true,
+    sticky: false,
     // (int | optional) the time you want it to be alive for before fading out
-    time: '',
+    time: 0,
     // (string | optional) the class name you want to apply to that specific message
     class_name: 'my-sticky-class'
   });

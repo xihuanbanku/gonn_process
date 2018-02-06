@@ -19,4 +19,14 @@ public class GreetingController {
     public String index() {
         return "index";
     }
+
+    @RequestMapping("/dashboard")
+    public String dashboard() {
+        return "dashboard";
+    }
+
+    @RequestMapping("/tasks")
+    public String tasks() {
+        return "tasks";
+    }
 }

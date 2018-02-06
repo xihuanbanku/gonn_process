@@ -29,10 +29,11 @@
 	</properties>
 
 	<dependencies>
-        <dependency>
+        <!--静态资源模板-->
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+        </dependency>-->
         <!-- SpringBoot - Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

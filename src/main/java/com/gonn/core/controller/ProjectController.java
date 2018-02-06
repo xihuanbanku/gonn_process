@@ -20,7 +20,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/process")
-public class ProcessController {
+public class ProjectController {
 
     @Autowired
     private ProjectService processService;
