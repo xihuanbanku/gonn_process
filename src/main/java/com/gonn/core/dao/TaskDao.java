@@ -3,9 +3,11 @@ package com.gonn.core.dao;
 import com.gonn.core.entity.Task;
 import com.gonn.core.entity.TaskQuery;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public interface TaskDao {
     int countByExample(TaskQuery example);
 

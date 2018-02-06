@@ -29,9 +29,9 @@ public class Project implements Serializable {
     /**
      * 0=未完成 1=已完成 2=删除
      */
-    private Integer flag;
+    private Integer flag = 0;
 
-    private Date dtime;
+    private Date dtime = new Date();
 
     private static final long serialVersionUID = 1L;
 

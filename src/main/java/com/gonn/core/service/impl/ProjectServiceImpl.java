@@ -1,8 +1,10 @@
 package com.gonn.core.service.impl;
 
 import com.gonn.core.dao.ProjectDao;
+import com.gonn.core.dao.TaskDao;
 import com.gonn.core.entity.Project;
 import com.gonn.core.entity.ProjectQuery;
+import com.gonn.core.entity.Task;
 import com.gonn.core.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,6 +12,7 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,8 +24,11 @@ import java.util.Map;
 @Transactional(propagation = Propagation.REQUIRED,isolation = Isolation.DEFAULT,timeout=36000,rollbackFor=Exception.class)
 public class ProjectServiceImpl implements ProjectService {
 
-    @Autowired
+    @Resource
     private ProjectDao projectDao;
+
+    @Resource
+    private TaskDao taskDao;
 
     /**
      * 新创建一个流程
@@ -30,7 +36,16 @@ public class ProjectServiceImpl implements ProjectService {
      */
     @Transactional
     public int insert(Project process) {
-        return projectDao.insert(process);
+        //创建项目
+        projectDao.insert(process);
+        //创建第1条任务
+        Task task = new Task();
+        task.setSender(1);
+        task.setSubject("创建项目");
+        task.setContent("初始创建项目");
+        task.setpId(process.getId());
+        return  taskDao.insert(task);
+
     }
 
     @Override
