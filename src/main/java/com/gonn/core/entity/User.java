@@ -3,6 +3,9 @@ package com.gonn.core.entity;
 import java.io.Serializable;
 
 public class User implements Serializable {
+    public User() {
+    }
+
     public User(String username, String password, Short userSex, String nickName, String phone, String email) {
         this.username = username;
         this.password = password;

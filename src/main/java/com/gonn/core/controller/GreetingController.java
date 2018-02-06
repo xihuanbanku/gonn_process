@@ -15,4 +15,8 @@ public class GreetingController {
         return "greeting";
     }
 
+    @RequestMapping("/index")
+    public String index() {
+        return "index";
+    }
 }
