@@ -27,7 +27,7 @@
                 <div class="accordion-inner">
                     <a class="accordion-toggle" href="ui_features.html"><i class="icon-star"></i> UI Features</a>
                     <a class="accordion-toggle" href="forms.html"><i class="icon-list-alt"></i> Forms</a>
-                    <a class="accordion-toggle" href="tables.html"><i class="icon-table"></i> Tables</a>
+                    <a class="accordion-toggle" href="/tables"><i class="icon-table"></i> Tables</a>
                     <a class="accordion-toggle" href="buttons.html"><i class="icon-circle"></i> Buttons</a>
                 </div>
             </div>

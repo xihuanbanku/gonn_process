@@ -29,4 +29,9 @@ public class GreetingController {
     public String tasks() {
         return "tasks";
     }
+
+    @RequestMapping("/tables")
+    public String tables() {
+        return "tables";
+    }
 }
