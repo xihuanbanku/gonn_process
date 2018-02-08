@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Admin
@@ -8,20 +9,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Realm - Tables</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Bluth Company">
-    <link rel="shortcut icon" href="assets/ico/favicon.html">
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/theme.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/alertify.css" rel="stylesheet">
-    <link rel="Favicon Icon" href="favicon.ico">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <title>广网 - 我的任务</title>
+    <%@ include file="include/head.jsp" %>
 </head>
 <body>
 <div id="wrap">
@@ -34,12 +23,12 @@
         <div class="main_container" id="tables_page">
             <div class="row-fluid">
                 <ul class="breadcrumb">
-                    <li><a href="#">Home</a> <span class="divider">/</span></li>
-                    <li><a href="#">Pages</a> <span class="divider">/</span></li>
-                    <li class="active">Tables</li>
+                    <li><a href="#">首页</a> <span class="divider">/</span></li>
+                    <li><a href="#">任务</a> <span class="divider">/</span></li>
+                    <li class="active">列表</li>
                 </ul>
                 <h2 class="heading">
-                    Tables
+                    我的任务
                 </h2>
             </div>
             <div class="ystep2"></div>
@@ -48,7 +37,7 @@
                 <div class="widget widget-padding span12">
                     <div class="widget-header">
                         <i class="icon-group"></i>
-                        <h5>任务列表</h5>
+                        <h5>我的任务</h5>
                         <div class="widget-buttons">
                             <a href="#" data-title="Add Employee" data-toggle="modal" data-target="#example_modal"><i class="icon-plus"></i></a>
                             <a href="#" data-title="Collapse" data-collapsed="false" class="tip collapse"><i class="icon-chevron-up"></i></a>
@@ -122,17 +111,17 @@
         var recordCount = 0;
         $.ajax({
             type: "post",
-            url: "/task/list",
-            data: $("#searchForm input").serialize()+"&pId="+getQueryString("p_id")+"&pageCount="+pageCount+"&pageIndex="+(pageIndex+1)+"&nocache="+new Date().getTime(),
-            success: function(data){
+            url: "/task/myTasks",
+            data: $("#searchForm input").serialize()+"&uId=1&pageCount="+pageCount+"&pageIndex="+(pageIndex+1)+"&nocache="+new Date().getTime(),
+            success: function(resp){
                 // data = eval("("+data+")");
-                if(data.results == null) {
+                if(resp.meta.msgCode != 0) {
                     $("#contentTable tbody tr:gt(0)").remove();
                     return;
                 }
                 var html = "";
                 var steps = new Array();
-                $.each(data.results, function(entryIndex, entry){
+                $.each(resp.data.results, function(entryIndex, entry){
                     html += "<tr>"
                         +"    <td>"+entry.id+"</td>"
                         +"    <td><a href="+entry.subject+"'/list.html?p_id=''>"+entry.subject+"</a></td>"
@@ -213,7 +202,7 @@
                     });
                 });
 
-                recordCount = data.totalcount;
+                recordCount = resp.totalcount;
                 //调用用分页函数，将分页插件绑定到id为Pagination的div上
                 $("#Pagination").pagination(recordCount, { //recordCount在后台定义的一个公有变量，通过从数据库获取行数，返回全部的行数
                     callback: initPageCallback,  //点击分页，调用的毁掉函数

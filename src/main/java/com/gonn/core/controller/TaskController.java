@@ -1,5 +1,6 @@
 package com.gonn.core.controller;
 
+import com.gonn.core.entity.Response;
 import com.gonn.core.entity.Task;
 import com.gonn.core.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +31,16 @@ public class TaskController {
     }
 
     @RequestMapping("/list")
-    public Map list(Integer pId) {
-        return taskService.list(pId);
+    public Response list(Integer pId) {
+        Response response = new Response();
+        return response.success(taskService.list(pId));
+    }
+
+    @RequestMapping("/myTasks")
+    public Response myTasks(Integer uId) {
+        Response response = new Response();
+        return response.success(taskService.myTasks(uId));
+
     }
 
     @InitBinder

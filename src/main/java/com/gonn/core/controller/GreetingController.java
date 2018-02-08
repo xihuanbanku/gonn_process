@@ -15,23 +15,5 @@ public class GreetingController {
         return "greeting";
     }
 
-    @RequestMapping("/index")
-    public String index() {
-        return "index";
-    }
 
-    @RequestMapping("/dashboard")
-    public String dashboard() {
-        return "dashboard";
-    }
-
-    @RequestMapping("/tasks")
-    public String tasks() {
-        return "tasks";
-    }
-
-    @RequestMapping("/tables")
-    public String tables() {
-        return "tables";
-    }
 }

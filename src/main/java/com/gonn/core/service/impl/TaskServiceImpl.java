@@ -35,4 +35,16 @@ public class TaskServiceImpl implements TaskService {
         map.put("totalcount", totalcount);
         return map;
     }
+
+    @Override
+    public Map myTasks(Integer uId) {
+        Map map = new HashMap();
+        TaskQuery query = new TaskQuery();
+        query.createCriteria().andReceiverEqualTo(uId).andFlagNotEqualTo(2);
+        List<Task> results = taskDao.selectByExample(query);
+        map.put("results", results);
+        int totalcount = taskDao.countByExample(query);
+        map.put("totalcount", totalcount);
+        return map;
+    }
 }

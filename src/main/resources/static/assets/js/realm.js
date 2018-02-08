@@ -107,7 +107,7 @@ if($('#dashboard_page').length > 0 ){
 
   $.gritter.add({
     // (string | mandatory) the heading of the notification
-    title: 'Welcome to the Realm Admin Template',
+    title: 'Welcome to the 广网 Admin Template',
     // (string | mandatory) the text inside the notification
     text: 'This icon <i class="icon-external-link" style="font-size:15px;"></i> represents an external link to the documentation for that specific part of the template where you see it. So click if you need more info.',
     // (string | optional) the image to display on the left
