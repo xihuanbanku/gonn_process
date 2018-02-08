@@ -1,8 +1,7 @@
 package com.gonn.core.service;
 
 import com.gonn.core.entity.Project;
-
-import java.util.Map;
+import com.gonn.core.entity.Response;
 
 /**
  * 服务类
@@ -15,7 +14,7 @@ public interface ProjectService {
      */
     int insert(Project process);
 
-    Map list(Integer pageCount, Integer pageIndex);
+    Response list(Integer pageCount, Integer pageIndex, Integer draw);
 
     int update(Project project);
 

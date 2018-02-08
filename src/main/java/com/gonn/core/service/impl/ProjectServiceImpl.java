@@ -4,9 +4,9 @@ import com.gonn.core.dao.ProjectDao;
 import com.gonn.core.dao.TaskDao;
 import com.gonn.core.entity.Project;
 import com.gonn.core.entity.ProjectQuery;
+import com.gonn.core.entity.Response;
 import com.gonn.core.entity.Task;
 import com.gonn.core.service.ProjectService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -49,17 +49,17 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public Map list(Integer pageCount, Integer pageIndex) {
+    public Response list(Integer pageCount, Integer startRow, Integer draw) {
+        Response response = new Response();
         Map map = new HashMap();
         ProjectQuery e = new ProjectQuery();
-        e.setPageNo(pageIndex);
+        e.setStartRow(startRow);
         e.setPageSize(pageCount);
         e.createCriteria().andFlagNotEqualTo(2);
         List<Project> results = projectDao.selectByExample(e);
-        map.put("results", results);
         int totalcount = projectDao.countByExample(e);
-        map.put("totalcount", totalcount);
-        return map;
+        response.success(results, draw, totalcount, 0);
+        return response;
     }
 
     @Override

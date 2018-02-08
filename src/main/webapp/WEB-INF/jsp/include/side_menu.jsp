@@ -7,7 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <!-- Side menu -->
-<%@page contentType="text/html;charset=UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <div class="sidebar-nav nav-collapse collapse">
     <div class="user_side clearfix">
         <img src="/assets/img/odinn.jpg" alt="Odinn god of Thunder">
@@ -26,9 +26,9 @@
             </div>
             <div id="collapse1" class="accordion-body collapse">
                 <div class="accordion-inner">
-                    <a class="accordion-toggle" href="ui_features.html"><i class="icon-star"></i> UI特性</a>
-                    <a class="accordion-toggle" href="forms.html"><i class="icon-list-alt"></i> 表单</a>
-                    <a class="accordion-toggle" href="buttons.html"><i class="icon-circle"></i> 按钮</a>
+                    <a class="accordion-toggle" href="/portal/ui_features"><i class="icon-star"></i> UI特性</a>
+                    <a class="accordion-toggle" href="/portal/forms"><i class="icon-list-alt"></i> 表单</a>
+                    <a class="accordion-toggle" href="/portal/buttons"><i class="icon-circle"></i> 按钮</a>
                 </div>
             </div>
         </div>

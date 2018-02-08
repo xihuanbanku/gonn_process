@@ -27,9 +27,9 @@ public class ProjectController {
     private TaskService taskService;
 
     @RequestMapping("/list")
-    public Response list(Integer pageCount, Integer pageIndex) {
-        Response response = new Response();
-        return response.success(processService.list(pageCount, pageIndex));
+    public Response list(@RequestParam("length") Integer pageCount, @RequestParam("start") Integer startRow, String sortColumn, String sortDir, Integer draw) {
+        Response response = processService.list(pageCount, startRow, draw);
+        return response;
     }
 
     @RequestMapping("/{p_id}")

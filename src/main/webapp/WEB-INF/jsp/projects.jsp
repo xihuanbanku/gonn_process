@@ -149,6 +149,36 @@
                     </div> <!-- /widget-body -->
                 </div> <!-- /widget -->
             </div> <!-- /row-fluid -->
+
+
+            <div class="row-fluid">
+                <div class="widget widget-padding span12">
+                    <div class="widget-header">
+                        <i class="icon-group"></i>
+                        <h5>Dynamic Table</h5>
+                        <div class="widget-buttons">
+                            <a href="http://www.datatables.net/usage/" data-title="Documentation" class="tip" target="_blank"><i class="icon-external-link"></i></a>
+                            <a href="#" data-title="Collapse" data-collapsed="false" class="tip collapse"><i class="icon-chevron-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                        <table id="table" class="table table-striped table-bordered dataTable">
+                            <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>名称</th>
+                                <th>描述</th>
+                                <th>创建人</th>
+                                <th>截止时间</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody></table>
+                    </div>
+            </div>
         </div>
         <!-- /Main window -->
 
@@ -224,7 +254,34 @@
                 }
             });
         });
-        initPage(0);
+        // initPage(0);
+        $('#table').DataTable( {
+            "processing": true,
+            "serverSide": true,
+            "ajax" :  {
+                url: "/project/list",
+                type: "POST",
+                data: {
+                    "user_id": 451
+                }
+            },
+            "columns": [
+            {"data": "id", "bSortable": false},
+            {"data": "name"},
+            {"data": "content"},
+            {"data": "creater"},
+            {"data": "limitDate"},
+            {"data": "flag"}
+        ],
+            "columnDefs": [
+                {
+                    "targets": [4],
+                    "render": function(data, type, full) {
+                        return "<a href='/update?id=" + data + "'>Update</a>";
+                    }
+                }
+            ]
+        } );
     });
 
     function initPage(pageIndex) {
@@ -331,6 +388,7 @@
         //输出结果为2016-08-09，满足YYYY-MM-DD格式要求
         return date;
     }
+
 </script>
 </body>
 </html>

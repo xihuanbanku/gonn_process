@@ -1,5 +1,7 @@
 package com.gonn.core.entity;
 
+import java.util.List;
+
 /**
  * 响应
  * Created by Administrator on 2018-02-08.
@@ -13,6 +15,10 @@ public class Response {
     private Meta meta;
     private Object data;
 
+    private int draw; // Client request times
+    private int recordsTotal; // Total records number without conditions
+    private int recordsFiltered; // Total records number with conditions
+
     public Response success() {
         this.meta = new Meta(0, OK);
         return this;
@@ -21,6 +27,14 @@ public class Response {
     public Response success(Object data) {
         this.meta = new Meta(0, OK);
         this.data = data;
+        return this;
+    }
+    public Response success(Object data, int draw, int recordsTotal, int recordsFiltered) {
+        this.meta = new Meta(0, OK);
+        this.data = data;
+        this.draw = draw;
+        this.recordsTotal = recordsTotal;
+        this.recordsFiltered = recordsFiltered;
         return this;
     }
 
@@ -42,10 +56,24 @@ public class Response {
         return data;
     }
 
+    public int getDraw() {
+        return draw;
+    }
+
+    public int getRecordsTotal() {
+        return recordsTotal;
+    }
+
+    public int getRecordsFiltered() {
+        return recordsFiltered;
+    }
+
     public class Meta {
 
         private int msgCode;
         private String message;
+
+
 
         public Meta(int msgCode) {
             this.msgCode = msgCode;

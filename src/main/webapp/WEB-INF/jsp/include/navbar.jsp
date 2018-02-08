@@ -1,5 +1,4 @@
-
-<%@page contentType="text/html;charset=UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container-fluid">
@@ -52,5 +51,4 @@
 <script type="text/javascript" src="/assets/js/jquery.knob.js"></script>
 <script type='text/javascript' src='/assets/js/fullcalendar.min.js'></script>
 <script type='text/javascript' src='/assets/js/jquery.gritter.min.js'></script>
-<script type="text/javascript" src="/assets/js/realm.js"></script>
 <script type="text/javascript" src="/assets/js/jquery.slimscroll.min.js"></script>
