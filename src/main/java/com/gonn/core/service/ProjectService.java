@@ -14,7 +14,7 @@ public interface ProjectService {
      */
     int insert(Project process);
 
-    Response list(Integer pageCount, Integer pageIndex, Integer draw);
+    Response list(Integer pageSize, Integer pageIndex, Integer draw);
 
     int update(Project project);
 

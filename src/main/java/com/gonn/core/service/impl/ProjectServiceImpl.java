@@ -40,7 +40,7 @@ public class ProjectServiceImpl implements ProjectService {
         projectDao.insert(process);
         //创建第1条任务
         Task task = new Task();
-        task.setSender(1);
+        task.setSender(process.getCreater());
         task.setSubject("创建项目");
         task.setContent("初始创建项目");
         task.setpId(process.getId());
@@ -49,16 +49,16 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public Response list(Integer pageCount, Integer startRow, Integer draw) {
+    public Response list(Integer pageSize, Integer startRow, Integer draw) {
         Response response = new Response();
-        Map map = new HashMap();
         ProjectQuery e = new ProjectQuery();
+        //必须先设置每页大小, set方法里面会修改startRow
+        e.setPageSize(pageSize);
         e.setStartRow(startRow);
-        e.setPageSize(pageCount);
         e.createCriteria().andFlagNotEqualTo(2);
         List<Project> results = projectDao.selectByExample(e);
         int totalcount = projectDao.countByExample(e);
-        response.success(results, draw, totalcount, 0);
+        response.success(results, draw, totalcount, totalcount);
         return response;
     }
 

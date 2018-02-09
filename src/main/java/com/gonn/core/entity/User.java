@@ -6,13 +6,14 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String username, String password, Short userSex, String nickName, String phone, String email) {
+    public User(String username, String password, Short userSex, String nickName, String phone, String email, Short pic) {
         this.username = username;
         this.password = password;
         this.userSex = userSex;
         this.nickName = nickName;
         this.phone = phone;
         this.email = email;
+        this.pic = pic;
     }
 
     /**
@@ -44,6 +45,11 @@ public class User implements Serializable {
      * 电话
      */
     private String phone;
+
+    /**
+     * 头像
+     */
+    private Short pic;
 
     /**
      * 邮箱
@@ -108,6 +114,14 @@ public class User implements Serializable {
         this.email = email == null ? null : email.trim();
     }
 
+    public Short getPic() {
+        return pic;
+    }
+
+    public void setPic(Short pic) {
+        this.pic = pic;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -121,6 +135,7 @@ public class User implements Serializable {
         sb.append(", nickName=").append(nickName);
         sb.append(", phone=").append(phone);
         sb.append(", email=").append(email);
+        sb.append(", pic=").append(pic);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

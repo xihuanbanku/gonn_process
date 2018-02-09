@@ -69,8 +69,8 @@
                                             <li>35% <span>progress</span></li>
                                         </ul>
                                         <div class="info">
-                                            <img data-title="Mike" src="assets/img/avatars/01.jpg" class="avatar-20"/>
-                                            <img data-title="Bradley" src="assets/img/avatars/02.jpg" class="avatar-20"/>
+                                            <img data-title="Mike" src="/assets/img/avatars/01.jpg" class="avatar-20"/>
+                                            <img data-title="Bradley" src="/assets/img/avatars/02.jpg" class="avatar-20"/>
                                             <div class="date">Thursday</div>
                                         </div>
                                     </a>
@@ -90,7 +90,7 @@
                                             <li>45% <span>progress</span></li>
                                         </ul>
                                         <div class="info">
-                                            <img data-title="Christopher" src="assets/img/avatars/03.jpg" class="avatar-20"/>
+                                            <img data-title="Christopher" src="/assets/img/avatars/03.jpg" class="avatar-20"/>
                                             <div class="date">Thursday</div>
                                         </div>
                                     </a>
@@ -109,8 +109,8 @@
                                             <li>15% <span>progress</span></li>
                                         </ul>
                                         <div class="info">
-                                            <img data-title="Christopher" src="assets/img/avatars/05.jpg" class="avatar-20"/>
-                                            <img data-title="Christopher" src="assets/img/avatars/06.jpg" class="avatar-20"/>
+                                            <img data-title="Christopher" src="/assets/img/avatars/05.jpg" class="avatar-20"/>
+                                            <img data-title="Christopher" src="/assets/img/avatars/06.jpg" class="avatar-20"/>
                                             <div class="date">Thursday</div>
                                         </div>
                                     </a>
@@ -129,9 +129,9 @@
                                             <li>40% <span>progress</span></li>
                                         </ul>
                                         <div class="info">
-                                            <img data-title="Christopher" src="assets/img/avatars/02.jpg" class="avatar-20"/>
-                                            <img data-title="Christopher" src="assets/img/avatars/03.jpg" class="avatar-20"/>
-                                            <img data-title="Christopher" src="assets/img/avatars/04.jpg" class="avatar-20"/>
+                                            <img data-title="Christopher" src="/assets/img/avatars/02.jpg" class="avatar-20"/>
+                                            <img data-title="Christopher" src="/assets/img/avatars/03.jpg" class="avatar-20"/>
+                                            <img data-title="Christopher" src="/assets/img/avatars/04.jpg" class="avatar-20"/>
                                             <div class="date">Thursday</div>
                                         </div>
                                     </a>
@@ -155,7 +155,7 @@
                         <div class="widget-tasks-statistics">
                             <div class="userstats clearfix" style="margin-top: 25px;">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/07.jpg" class="image">
+                                    <img src="/assets/img/avatars/07.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="85">
                                     </div>
@@ -164,7 +164,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/08.jpg" class="image">
+                                    <img src="/assets/img/avatars/08.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="55">
                                     </div>
@@ -173,7 +173,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/09.jpg" class="image">
+                                    <img src="/assets/img/avatars/09.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="25">
                                     </div>
@@ -182,7 +182,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/10.jpg" class="image">
+                                    <img src="/assets/img/avatars/10.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="15">
                                     </div>
@@ -191,7 +191,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/11.jpg" class="image">
+                                    <img src="/assets/img/avatars/11.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="10">
                                     </div>
@@ -200,7 +200,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/12.jpg" class="image">
+                                    <img src="/assets/img/avatars/12.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="9">
                                     </div>
@@ -244,7 +244,7 @@
     </div>
     <div class="modal-body">
         <div class="clearfix">
-            <img src="assets/img/avatars/11.jpg" class="img-circle" style="float: left; width: 65px; margin-right: 20px;">
+            <img src="/assets/img/avatars/11.jpg" class="img-circle" style="float: left; width: 65px; margin-right: 20px;">
             <h3 style="margin:0">John</h3>
             <p class="muted">Marketing</p>
         </div>

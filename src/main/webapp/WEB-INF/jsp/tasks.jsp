@@ -128,7 +128,7 @@
                         +"    <td>"+entry.content+"</td>"
                         +"    <td>"+entry.sender+"</td>"
                         +"    <td>"+entry.receiver+"</td>"
-                        +"    <td>"+parseTime(entry.dtime)+"</td>"
+                        +"    <td>"+entry.dtime+"</td>"
                         +"    <td><span class=\"label label-success\">"+entry.flag+"</span></td>"
                         +"    <td>"
                         +"        <div class=\"btn-group\">"

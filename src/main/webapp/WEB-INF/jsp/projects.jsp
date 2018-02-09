@@ -31,7 +31,6 @@
                     项目列表
                 </h2>
             </div>
-            <div class="ystep2"></div>
 
             <div class="row-fluid">
                 <div class="widget widget-padding span12">
@@ -63,123 +62,6 @@
                     </div> <!-- /widget-body -->
                 </div> <!-- /widget -->
             </div> <!-- /row-fluid -->
-
-
-            <div class="row-fluid">
-                <div class="widget widget-padding span12">
-                    <div class="widget-header">
-                        <i class="icon-group"></i>
-                        <h5>Dynamic Table</h5>
-                        <div class="widget-buttons">
-                            <a href="http://www.datatables.net/usage/" data-title="Documentation" class="tip" target="_blank"><i class="icon-external-link"></i></a>
-                            <a href="#" data-title="Collapse" data-collapsed="false" class="tip collapse"><i class="icon-chevron-up"></i></a>
-                        </div>
-                    </div>
-                    <div class="widget-body">
-                        <table id="users" class="table table-striped table-bordered dataTable">
-                            <thead>
-                            <tr>
-                                <th>User</th>
-                                <th>Group</th>
-                                <th>Registered</th>
-                                <th>Status</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Amie</td>
-                                <td>Admin</td>
-                                <td>20-05-2012</td>
-                                <td><span class="label label-success">Active</span></td>
-                                <td>
-                                    <div class="btn-group">
-                                        <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">
-                                            Action
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#"><i class="icon-envelope"></i> Email</a></li>
-                                            <li><a href="#"><i class="icon-edit"></i> Edit</a></li>
-                                            <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Katy</td>
-                                <td>User</td>
-                                <td>12-08-2012</td>
-                                <td><span class="label label-success">Active</span></td>
-                                <td>
-                                    <div class="btn-group">
-                                        <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">
-                                            Action
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#"><i class="icon-envelope"></i> Email</a></li>
-                                            <li><a href="#"><i class="icon-edit"></i> Edit</a></li>
-                                            <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Nelson</td>
-                                <td>User</td>
-                                <td>03-06-2012</td>
-                                <td><span class="label label-success">Active</span></td>
-                                <td>
-                                    <div class="btn-group">
-                                        <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">
-                                            Action
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#"><i class="icon-envelope"></i> Email</a></li>
-                                            <li><a href="#"><i class="icon-edit"></i> Edit</a></li>
-                                            <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div> <!-- /widget-body -->
-                </div> <!-- /widget -->
-            </div> <!-- /row-fluid -->
-
-
-            <div class="row-fluid">
-                <div class="widget widget-padding span12">
-                    <div class="widget-header">
-                        <i class="icon-group"></i>
-                        <h5>Dynamic Table</h5>
-                        <div class="widget-buttons">
-                            <a href="http://www.datatables.net/usage/" data-title="Documentation" class="tip" target="_blank"><i class="icon-external-link"></i></a>
-                            <a href="#" data-title="Collapse" data-collapsed="false" class="tip collapse"><i class="icon-chevron-up"></i></a>
-                        </div>
-                    </div>
-                    <div class="widget-body">
-                        <table id="table" class="table table-striped table-bordered dataTable">
-                            <thead>
-                            <tr>
-                                <th>序号</th>
-                                <th>名称</th>
-                                <th>描述</th>
-                                <th>创建人</th>
-                                <th>截止时间</th>
-                                <th>状态</th>
-                                <th>操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody></table>
-                    </div>
-            </div>
-        </div>
         <!-- /Main window -->
 
     </div><!--/.fluid-container-->
@@ -248,16 +130,65 @@
                         alertify.alert( '提交成功.', function () {
                             // after clicking OK
                         });
-                        initPage(0);
                         $(".close").click();
                     }
                 }
             });
         });
-        // initPage(0);
-        $('#table').DataTable( {
+
+        var table = $('#contentTable').DataTable( {
             "processing": true,
             "serverSide": true,
+            // 是否允许排序
+            "ordering": true,
+            // 初期排序列
+            //"order": [[0,'asc'],[1,'desc']],
+            // 是否显示情报 就是"当前显示1/100记录"这个信息
+            //"info": true,
+            // 水平滚动条
+            "scrollX": true,
+            // 垂直滚动条
+            "scrollY": false,
+            // 件数选择功能 默认true
+            "lengthChange": false,
+            // 件数选择下拉框内容
+//            "lengthMenu": [10, 25, 50, 75, 100],
+            // 每页的初期件数 用户可以操作lengthMenu上的值覆盖
+            "pageLength": 10,
+            //翻页按钮样式
+            // numbers:数字
+            //"simple": "前一页","后一页",
+            //"simple_numbers":"前一页，后一页，数字",
+            // full:第一页，前一页，后一页，最后页
+            //full_numbers:第一页，前一页，后一页，最后页，数字
+            //first_last_numbers:第一页，最后页，数字
+            "pagingType": "full_numbers",
+            // 自动列宽
+            "autoWidth": false,
+            "oLanguage": {
+                "sProcessing":   "处理中...",
+                "sLengthMenu":   "显示 _MENU_ 项结果",
+                "sZeroRecords":  "没有匹配结果",
+                "sInfo":         "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty":    "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix":  "",
+                "sSearch":       "搜索:",
+                "sUrl":          "",
+                "sEmptyTable":     "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands":  ",",
+                "oPaginate": {
+                    "sFirst":    "首页",
+                    "sPrevious": "上页",
+                    "sNext":     "下页",
+                    "sLast":     "末页"
+                },
+                "oAria": {
+                    "sSortAscending":  ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            },
             "ajax" :  {
                 url: "/project/list",
                 type: "POST",
@@ -265,22 +196,51 @@
                     "user_id": 451
                 }
             },
-            "columns": [
-            {"data": "id", "bSortable": false},
-            {"data": "name"},
-            {"data": "content"},
-            {"data": "creater"},
-            {"data": "limitDate"},
-            {"data": "flag"}
+            columns: [
+            {data: "id", "bSortable": false},
+            {data: "name"},
+            {data: "content"},
+            {data: "creater"},
+            {data: "limitDate"},
+            {data: "flag"}
         ],
             "columnDefs": [
                 {
+                    "targets": [1],
+                    "render": function(data, type, full) {
+                        return "<a href='/portal/tasks?p_id="+full.id+"'>"+full.name+"</a>";
+                    }
+                },
+                {
                     "targets": [4],
                     "render": function(data, type, full) {
-                        return "<a href='/update?id=" + data + "'>Update</a>";
+                        return data.substr(0,10);
+                    }
+                },
+                {
+                    "targets": [5],
+                    "render": function(data, type, full) {
+                        return "<span class=\"label label-success\">"+data+"</span>";
+                    }
+                },
+                {
+                    "targets": [6],
+                    "render": function(data, type, full) {
+                        return "-";
+//                        return "<button >修正</button><button value="+full.id+" >删除</button>";
                     }
                 }
             ]
+        } );
+
+        $('#contentTable tbody').on( 'click', 'tr', function () {
+            if ( $(this).hasClass('selected') ) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
         } );
     });
 
@@ -303,12 +263,12 @@
                     html += ""
                         +"<tr>"
                         +"    <td>"+entry.id+"</td>"
-                        +"    <td><a href='../portal/tasks?p_id="+entry.id+"'>"+entry.name+"</a></td>"
+                        +"    <td></td>"
                         +"    <td>"+entry.content+"</td>"
                         +"    <td>"+entry.creater+"</td>"
                         +"    <td>"+parseTime(entry.limitDate)+"</td>"
                         +"    <td>"+entry.flag+"</td>"
-                        +"    <td><button >修正</button><button value="+entry.id+" >削除</button></td>"
+                        +"    <td></td>"
                         +"</tr>";
 
                 });

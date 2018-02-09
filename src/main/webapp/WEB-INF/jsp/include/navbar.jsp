@@ -18,11 +18,11 @@
 
             <div class="top-menu visible-desktop">
                 <ul class="pull-left">
-                    <li><a id="messages" data-notification="2" href="#"><i class="icon-envelope"></i> 消息</a></li>
-                    <li><a id="notifications" data-notification="3" href="#"><i class="icon-globe"></i> 通知</a></li>
+                    <li><a id="messages" data-notification="0" href="#"><i class="icon-envelope"></i> 消息</a></li>
+                    <li><a id="notifications" data-notification="0" href="#"><i class="icon-globe"></i> 通知</a></li>
                 </ul>
                 <ul class="pull-right">
-                    <li><a href="login.html"><i class="icon-off"></i> 注销</a></li>
+                    <li><a href="/login/logout"><i class="icon-off"></i> 注销</a></li>
                 </ul>
             </div>
 
@@ -30,7 +30,7 @@
                 <ul class="pull-right">
                     <li><a title="link to View all Messages page, no popover in phone view or tablet" href="#"><i class="icon-envelope"></i></a></li>
                     <li><a title="link to View all Notifications page, no popover in phone view or tablet" href="#"><i class="icon-globe"></i></a></li>
-                    <li><a href="login.html"><i class="icon-off"></i></a></li>
+                    <li><a href="/login/logout"><i class="icon-off"></i></a></li>
                 </ul>
             </div>
 

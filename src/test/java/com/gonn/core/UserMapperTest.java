@@ -21,8 +21,8 @@ public class UserMapperTest {
 
     @Test
     public void testInsert() throws Exception {
-        userDao.insert(new User("ljj", "ljj", (short) 2, "LJJ", "18710028855", "18710028855@139.com"));
-        userDao.insert(new User("lhk", "lhk", (short) 1, "LHK", "13439483571", "13439483571@139.com"));
+        userDao.insert(new User("ljj", "ljj", (short) 2, "LJJ", "18710028855", "18710028855@139.com", (short) 1));
+        userDao.insert(new User("lhk", "lhk", (short) 1, "LHK", "13439483571", "13439483571@139.com", (short) 1));
 
         Assert.assertEquals(2, userDao.selectByExample(null).size());
     }

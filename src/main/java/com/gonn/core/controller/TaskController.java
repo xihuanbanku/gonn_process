@@ -2,6 +2,7 @@ package com.gonn.core.controller;
 
 import com.gonn.core.entity.Response;
 import com.gonn.core.entity.Task;
+import com.gonn.core.entity.User;
 import com.gonn.core.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
@@ -37,7 +39,8 @@ public class TaskController {
     }
 
     @RequestMapping("/myTasks")
-    public Response myTasks(Integer uId) {
+    public Response myTasks(HttpSession session) {
+        Integer uId = ((User)session.getAttribute("user")).getId();
         Response response = new Response();
         return response.success(taskService.myTasks(uId));
 

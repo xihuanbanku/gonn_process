@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
 左侧导航栏
   Created by IntelliJ IDEA.
@@ -10,12 +11,12 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <div class="sidebar-nav nav-collapse collapse">
     <div class="user_side clearfix">
-        <img src="/assets/img/odinn.jpg" alt="Odinn god of Thunder">
-        <h5>梁海昆</h5>
+        <img src="/assets/img/head/<c:out value="${user.pic}"/>.png" alt="<c:out value="${user.nickName}"/>">
+        <h5><c:out value="${user.nickName}"/></h5>
         <a href="#"><i class="icon-cog"></i>设置</a>
     </div>
     <div class="accordion" id="accordion2">
-        <div class="accordion-group">
+        <%--<div class="accordion-group">
             <div class="accordion-heading">
                 <a class="accordion-toggle b_F79999" href="/portal/dashboard"><i class="icon-dashboard"></i> <span>仪表盘</span></a>
             </div>
@@ -48,7 +49,7 @@
             <div class="accordion-heading">
                 <a class="accordion-toggle b_F6F1A2" href="/portal/task_analyze"><i class="icon-bar-chart"></i> <span>任务分析</span></a>
             </div>
-        </div>
+        </div>--%>
         <div class="accordion-group">
             <div class="accordion-heading">
                 <a class="accordion-toggle b_9FDDF6" href="/portal/projects"><i class="icon-pushpin"></i> <span>项目列表</span></a>
@@ -64,7 +65,7 @@
                 <a class="accordion-toggle b_C1F8A9" href="/portal/analytics"><i class="icon-bar-chart"></i> <span>分析</span></a>
             </div>
         </div>
-        <div class="accordion-group">
+        <%--<div class="accordion-group">
             <div class="accordion-heading">
                 <a class="accordion-toggle b_9FDDF6" href="/portal/tickets"><i class="icon-bullhorn"></i> <span>投票</span></a>
             </div>
@@ -73,7 +74,7 @@
             <div class="accordion-heading">
                 <a class="accordion-toggle b_F5C294" href="/portal/users"><i class="icon-user"></i> <span>用户</span></a>
             </div>
-        </div>
+        </div>--%>
     </div>
 </div>
 <script type="text/javascript">

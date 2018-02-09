@@ -15,5 +15,10 @@ public class GreetingController {
         return "greeting";
     }
 
+    @RequestMapping("/")
+    public String index() {
+        return "index";
+    }
+
 
 }

@@ -265,7 +265,7 @@
                         <div class="widget-tasks-statistics">
                             <div class="userstats clearfix" style="margin-top: 25px;">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/07.jpg" class="image">
+                                    <img src="/assets/img/avatars/07.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="85">
                                     </div>
@@ -274,7 +274,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/08.jpg" class="image">
+                                    <img src="/assets/img/avatars/08.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="55">
                                     </div>
@@ -283,7 +283,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/09.jpg" class="image">
+                                    <img src="/assets/img/avatars/09.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="25">
                                     </div>
@@ -292,7 +292,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/10.jpg" class="image">
+                                    <img src="/assets/img/avatars/10.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="15">
                                     </div>
@@ -301,7 +301,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/11.jpg" class="image">
+                                    <img src="/assets/img/avatars/11.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="10">
                                     </div>
@@ -310,7 +310,7 @@
                             </div>
                             <div class="userstats clearfix">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#task_modal">
-                                    <img src="assets/img/avatars/12.jpg" class="image">
+                                    <img src="/assets/img/avatars/12.jpg" class="image">
                                     <div class="widget">
                                         <input class="knob" data-width="75" data-height="75" data-displayInput=false data-readOnly=true data-thickness=".3" value="9">
                                     </div>
@@ -338,7 +338,7 @@
                             <ul>
                                 <li class="priority-high">
                                     <a href="javascript:void(0);" data-toggle="modal" data-target="#example_modal">
-                                        <img src="assets/img/avatars/02.jpg" class="avatar"/>
+                                        <img src="/assets/img/avatars/02.jpg" class="avatar"/>
                                         <h5>Javascript error</h5>
                                         <p>There's a javascript error on your frontpage if...</p>
                                         <div class="date">Thursday</div>
@@ -346,7 +346,7 @@
                                 </li>
                                 <li class="priority-medium">
                                     <a href="javascript:void(0);" data-toggle="modal" data-target="#example_modal">
-                                        <img src="assets/img/avatars/03.jpg" class="avatar"/>
+                                        <img src="/assets/img/avatars/03.jpg" class="avatar"/>
                                         <h5>Login</h5>
                                         <p>I can't login, theres an error when I go to the...</p>
                                         <div class="date">Thursday</div>
@@ -354,7 +354,7 @@
                                 </li>
                                 <li class="priority-medium">
                                     <a href="javascript:void(0);" data-toggle="modal" data-target="#example_modal">
-                                        <img src="assets/img/avatars/04.jpg" class="avatar"/>
+                                        <img src="/assets/img/avatars/04.jpg" class="avatar"/>
                                         <h5>Problem</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
                                         <div class="date">Monday</div>
@@ -362,7 +362,7 @@
                                 </li>
                                 <li class="priority-medium">
                                     <a href="javascript:void(0);" data-toggle="modal" data-target="#example_modal">
-                                        <img src="assets/img/avatars/01.jpg" class="avatar"/>
+                                        <img src="/assets/img/avatars/01.jpg" class="avatar"/>
                                         <h5>Problem</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
                                         <div class="date">Monday</div>
@@ -370,7 +370,7 @@
                                 </li>
                                 <li class="priority-medium">
                                     <a href="javascript:void(0);" data-toggle="modal" data-target="#example_modal">
-                                        <img src="assets/img/avatars/13.jpg" class="avatar"/>
+                                        <img src="/assets/img/avatars/13.jpg" class="avatar"/>
                                         <h5>A Problem</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
                                         <div class="date">Monday</div>
@@ -378,7 +378,7 @@
                                 </li>
                                 <li class="priority-low">
                                     <a href="javascript:void(0);" data-toggle="modal" data-target="#example_modal">
-                                        <img src="assets/img/avatars/12.jpg" class="avatar"/>
+                                        <img src="/assets/img/avatars/12.jpg" class="avatar"/>
                                         <h5>Big Problem</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
                                         <div class="date">Yesterday</div>
@@ -386,7 +386,7 @@
                                 </li>
                                 <li class="priority-low">
                                     <a href="javascript:void(0);" data-toggle="modal" data-target="#example_modal">
-                                        <img src="assets/img/avatars/08.jpg" class="avatar"/>
+                                        <img src="/assets/img/avatars/08.jpg" class="avatar"/>
                                         <h5>Big Problem</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
                                         <div class="date">Yesterday</div>
@@ -394,7 +394,7 @@
                                 </li>
                                 <li class="priority-low">
                                     <a href="javascript:void(0);" data-toggle="modal" data-target="#example_modal">
-                                        <img src="assets/img/avatars/10.jpg" class="avatar"/>
+                                        <img src="/assets/img/avatars/10.jpg" class="avatar"/>
                                         <h5>Big Problem</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
                                         <div class="date">Yesterday</div>
@@ -402,7 +402,7 @@
                                 </li>
                                 <li class="priority-low">
                                     <a href="javascript:void(0);" data-toggle="modal" data-target="#example_modal">
-                                        <img src="assets/img/avatars/11.jpg" class="avatar"/>
+                                        <img src="/assets/img/avatars/11.jpg" class="avatar"/>
                                         <h5>Big Problem</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
                                         <div class="date">Yesterday</div>
@@ -428,7 +428,7 @@
                         <div class="widget-comments clearfix slimscroll">
                             <ul>
                                 <li>
-                                    <img src="assets/img/avatars/04.jpg" class="avatar"/>
+                                    <img src="/assets/img/avatars/04.jpg" class="avatar"/>
                                     <div class="comment-bubble">
                                         <h4>Anthony Newsfeed - <strong>Anthony23</strong></h4>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna ligula, mattis...
@@ -439,7 +439,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="assets/img/avatars/05.jpg" class="avatar"/>
+                                    <img src="/assets/img/avatars/05.jpg" class="avatar"/>
                                     <div class="comment-bubble">
                                         <h4>Christian Tomshed - <strong>Christian01</strong></h4>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna ligula, mattis...
@@ -450,7 +450,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="assets/img/avatars/06.jpg" class="avatar"/>
+                                    <img src="/assets/img/avatars/06.jpg" class="avatar"/>
                                     <div class="comment-bubble">
                                         <h4>Bill Feenhound - <strong>Bill98</strong></h4>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna ligula, mattis...
@@ -461,7 +461,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="assets/img/avatars/03.jpg" class="avatar"/>
+                                    <img src="/assets/img/avatars/03.jpg" class="avatar"/>
                                     <div class="comment-bubble">
                                         <h4>Bill Feenhound - <strong>Bill98</strong></h4>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna ligula, mattis...
@@ -472,7 +472,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="assets/img/avatars/04.jpg" class="avatar"/>
+                                    <img src="/assets/img/avatars/04.jpg" class="avatar"/>
                                     <div class="comment-bubble">
                                         <h4>Bill Feenhound - <strong>Bill98</strong></h4>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna ligula, mattis...
@@ -483,7 +483,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <img src="assets/img/avatars/05.jpg" class="avatar"/>
+                                    <img src="/assets/img/avatars/05.jpg" class="avatar"/>
                                     <div class="comment-bubble">
                                         <h4>Bill Feenhound - <strong>Bill98</strong></h4>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna ligula, mattis...
@@ -671,7 +671,7 @@
     </div>
     <div class="modal-body">
         <div class="clearfix">
-            <img src="assets/img/avatars/11.jpg" class="img-circle" style="float: left; width: 65px; margin-right: 20px;">
+            <img src="/assets/img/avatars/11.jpg" class="img-circle" style="float: left; width: 65px; margin-right: 20px;">
             <h3 style="margin:0">John</h3>
             <p class="muted">Marketing</p>
         </div>

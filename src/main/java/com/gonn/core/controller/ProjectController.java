@@ -2,6 +2,7 @@ package com.gonn.core.controller;
 
 import com.gonn.core.entity.Project;
 import com.gonn.core.entity.Response;
+import com.gonn.core.entity.User;
 import com.gonn.core.service.ProjectService;
 import com.gonn.core.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -39,7 +41,9 @@ public class ProjectController {
     }
 
     @RequestMapping("/new")
-    public int new_project(Project project) {
+    public int new_project(Project project, HttpSession session) {
+        User user = (User) session.getAttribute("user");
+        project.setCreater(user.getId());
         return processService.insert(project);
     }
 

@@ -112,7 +112,7 @@
         $.ajax({
             type: "post",
             url: "/task/myTasks",
-            data: $("#searchForm input").serialize()+"&uId=1&pageCount="+pageCount+"&pageIndex="+(pageIndex+1)+"&nocache="+new Date().getTime(),
+            data: $("#searchForm input").serialize()+"&pageCount="+pageCount+"&pageIndex="+(pageIndex+1)+"&nocache="+new Date().getTime(),
             success: function(resp){
                 // data = eval("("+data+")");
                 if(resp.meta.msgCode != 0) {
@@ -128,7 +128,7 @@
                         +"    <td>"+entry.content+"</td>"
                         +"    <td>"+entry.sender+"</td>"
                         +"    <td>"+entry.receiver+"</td>"
-                        +"    <td>"+parseTime(entry.dtime)+"</td>"
+                        +"    <td>"+entry.dtime+"</td>"
                         +"    <td><span class=\"label label-success\">"+entry.flag+"</span></td>"
                         +"    <td>"
                         +"        <div class=\"btn-group\">"
